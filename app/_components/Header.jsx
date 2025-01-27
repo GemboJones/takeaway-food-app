@@ -9,8 +9,8 @@ export const Header = () => {
   const { user, isSignedIn } = useUser();
 
   return (
-    <div className="flex justify-between items-center p-6 md:px-20 shadow-sm fixed w-full top-0 left-0 z-20 ">
-      <Image src={"/next.svg"} alt="logo" width={150} height={150} />
+    <div className="flex justify-between items-center p-6 md:px-20 shadow-sm ">
+      <Image src="/logo.png" alt="logo" width="180" height="180" priority />
 
       <div className="hidden md:flex border p-2 rounded-md bg-gray-200 w-96 ">
         <input type="text" className="bg-transparent w-full outline-none " />
