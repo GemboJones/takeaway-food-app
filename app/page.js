@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { CategoryList } from "./_components/CategoryList";
 
 export default function Home() {
   return (
     <div>
-      <h2>hi</h2>
+      <CategoryList />
     </div>
   );
 }
