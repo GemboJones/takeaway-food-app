@@ -9,7 +9,7 @@ export const Header = () => {
   const { user, isSignedIn } = useUser();
 
   return (
-    <div className="flex justify-between items-center p-6 md:px-20 shadow-sm ">
+    <div className="flex justify-between items-center py-6 shadow-sm ">
       <Image src="/logo.png" alt="logo" width="180" height="180" priority />
 
       <div className="hidden md:flex border p-2 rounded-md bg-gray-200 w-96 ">
