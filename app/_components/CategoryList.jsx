@@ -30,11 +30,6 @@ export const CategoryList = () => {
         categories.map((category, index) => {
           return (
             <li key={index}>
-              {console.log(
-                selectedCategory,
-                category.slug,
-                selectedCategory === category.slug
-              )}
               <Link
                 href={`?category=${category.slug}`}
                 className={`flex flex-col items-center gap-3 p-4 rounded-xl min-w-28 border cursor-pointer hover:bg-accent group ${
@@ -44,13 +39,20 @@ export const CategoryList = () => {
               >
                 <Image
                   src={category.icon?.url}
-                  alt={category.name}
+                  alt={category.name} 
                   width={40}
                   height={40}
                   priority
                   className="group-hover:scale-125 transition-all duration-150 "
                 />
-                <h2 className="text-sm font-medium">{category.name}</h2>
+                <h2
+                  className={`text-sm font-medium ${
+                    selectedCategory === category.slug &&
+                    " text-orange-600 before:content-['✓_']"
+                  }`}
+                >
+                  {category.name}
+                </h2>
               </Link>
             </li>
           );
