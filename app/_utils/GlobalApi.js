@@ -18,3 +18,27 @@ export const GetCategory = async () => {
   const result = await request(MASTER_URL, query);
   return result;
 };
+
+export const GetRestaurant = async (category) => {
+  const query = gql`
+    query Restaurant {
+      restaurants(where: { category_some: { slug: "${category}" } }) {
+        name
+        aboutUs
+        address
+        slug
+        workingHours
+        restaurantType
+        category {
+          name
+        }
+        banner {
+          url
+        }
+        id
+      }
+    }
+  `;
+  const result = await request(MASTER_URL, query);
+  return result;
+};
