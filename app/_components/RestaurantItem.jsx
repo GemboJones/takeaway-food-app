@@ -6,7 +6,7 @@ export const RestaurantItem = ({ restaurant }) => {
   return (
     <div>
       <li>
-        <Link href={"/"}>
+        <Link href={`/restaurant/${restaurant.slug}`}>
           <Image
             src={restaurant.banner?.url}
             alt={restaurant.name}
