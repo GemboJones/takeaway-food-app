@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 import { Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const Header = () => {
@@ -10,7 +11,9 @@ export const Header = () => {
 
   return (
     <div className="flex justify-between items-center py-6 shadow-sm ">
-      <Image src="/logo.png" alt="logo" width="180" height="180" priority />
+      <Link href={"/?category=all"}>
+        <Image src="/logo.png" alt="logo" width="180" height="180" priority />
+      </Link>
 
       <div className="hidden md:flex border p-2 rounded-md bg-gray-200 w-96 ">
         <input type="text" className="bg-transparent w-full outline-none " />
