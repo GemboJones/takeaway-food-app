@@ -1,11 +1,11 @@
 import { CategoryList } from "./_components/CategoryList";
-import { BusinessList } from "./_components/BusinessList";
+import { RestaurantList } from "./_components/RestaurantList";
 
 export default function Home() {
   return (
     <div>
       <CategoryList />
-      <BusinessList />
+      <RestaurantList />
     </div>
   );
 }
