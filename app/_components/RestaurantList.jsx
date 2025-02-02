@@ -12,8 +12,12 @@ export const RestaurantList = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    params && setCategory(params.get("category"));
-    params && getRestaurantList(params.get("category"));
+    params &&
+      setCategory(params.get("category") ? params.get("category") : "all");
+    params &&
+      getRestaurantList(
+        params.get("category") ? params.get("category") : "all"
+      );
   }, [params]);
 
   const getRestaurantList = (selectedCategory) => {
