@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <div className="flex justify-between items-center py-6 shadow-sm ">
       <Link href={"/?category=all"}>
-        <Image src="/logo.png" alt="logo" width="180" height="180" priority />
+        <Image src="/logo.png" alt="logo" width="220" height="180" priority />
       </Link>
 
       <div className="hidden md:flex border p-2 rounded-md bg-gray-200 w-96 ">
