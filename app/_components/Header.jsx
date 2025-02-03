@@ -10,28 +10,32 @@ export const Header = () => {
   const { user, isSignedIn } = useUser();
 
   return (
-    <div className="flex justify-between items-center py-6 shadow-sm ">
+    <nav className="flex justify-between items-center py-4 shadow-sm px-10 md:px-20 gap-4">
       <Link href={"/"}>
         <Image src="/logo.png" alt="logo" width={220} height={220} priority />
       </Link>
 
-      <div className="hidden md:flex border p-2 rounded-md bg-gray-200 w-96 ">
-        <input type="text" className="bg-transparent w-full outline-none " />
-        <Search />
+      <div className="hidden md:flex border gap-2.5 py-2 px-3 rounded-md bg-gray-100 w-96 ">
+        <Search className="text-gray-400 w-5" />
+        <input
+          type="text"
+          placeholder="Search"
+          className="bg-transparent w-full outline-none "
+        />
       </div>
 
       {isSignedIn ? (
         <UserButton />
       ) : (
-        <div className="flex gap-5 ">
+        <div className="flex gap-3 ">
           <SignInButton mode="modal">
             <Button variant="outline">Login</Button>
           </SignInButton>
           <SignUpButton mode="modal">
-            <Button>Signup</Button>
+            <Button>Sign Up</Button>
           </SignUpButton>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
