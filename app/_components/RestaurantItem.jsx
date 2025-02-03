@@ -17,8 +17,14 @@ export const RestaurantItem = ({ restaurant }) => {
           />
           <div className="mt-2">
             <h2 className="font-bold text-lg">{restaurant.name}</h2>
-            <div>
-              <div>⭐</div>
+            <div className="flex justify-between items-center">
+              <div className="flex gap-2 items-center">
+                <p>⭐</p>
+                <label className="text-gray-400 text-sm">4.5</label>
+              </div>
+              <h2 className="text-gray-400 text-sm">
+                {restaurant?.category[0].name}
+              </h2>
             </div>
           </div>
         </Link>
